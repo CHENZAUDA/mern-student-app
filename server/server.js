@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cors());
 
-db.on('error',()=>{console.log("connection fail")});
+db.on('error',()=>{console.log("connection  fail")});
 
 
 app.listen(PORT,()=>{
