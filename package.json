@@ -1,0 +1,28 @@
+{
+  "name": "atudentaapp",
+  "version": "1.0.0",
+  "description": "mern-app",
+  "main": "server.js",
+  "scripts": {
+    "setup": "npm install && cd client && npm install",
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js",
+    "client": "cd client && npm run start",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"  },
+  "author": "chen zauda",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.6"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.1",
+    "nodemon": "^2.0.12"
+  },
+  "engines": {
+    "node": "14.x"
+}
+}
